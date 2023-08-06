@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Survey Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+    }
+    #title {
+      background-color: #87CEEB;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    #description {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .fieldset {
+      border: 2px solid #87CEEB;
+      padding: 20px;
+      margin: 10px;
+    }
+    .sub-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .left {
+      flex: 1;
+    }
+    .right {
+      flex: 2;
+    }
+    .input-field,
+    .dropdown {
+      width: 100%;
+      padding: 10px;
+    }
+    .checkbox {
+      margin: 5px 0;
+    }
+    .radio {
+      margin: 5px 0;
+    }
+    .commentbox textarea {
+      width: 100%;
+      padding: 10px;
+    }
+    #submit {
+      background-color: #87CEEB;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    #submit:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="title">
+      <h1>Survey Form</h1>
+    </div>
+  </header>
+
+  <form id="survey-form">
+    <div id="description">Let us know how we can improve our service</div><br>
+
+    <fieldset class="fieldset">
+      <div class="sub-group">
+        <label class="left" id="name-label" for="name">*Name:</label>
+        <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="sub-group">
+        <label class="left" id="email-label" for="email">*Email:</label>
+        <input type="email" name="Email-address" class="right input-field" placeholder="Enter your email" id="email" required>
+      </div>
+
+      <div class="sub-group">
+        <label class="left" id="number-label" for="number">*Age:</label>
+        <input type="number" name="Age" placeholder="Age" min="1" max="100" class="right input-field" id="number">
+      </div>
+
+      <div class="sub-group">
+        <label class="left" id="handphone-label" for="handphone">*Handphone:</label>
+        <input type="text" placeholder="Phone Number" class="right input-field" id="handphone">
+      </div>
+
+      <div class="sub-group">
+        <label class="left" for="dropdown">*First time playing Escape Room?</label>
+        <select class="right dropdown" id="dropdown" name="dropdown">
+          <option selected disabled>Select an option</option>
+          <option value="first">First-Timer</option>
+          <option value="never">Never Play Before</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <div class="sub-group">
+        <label class="left">*Which game you played?</label>
+        <ul style="list-style: none;" class="right">
+          <li class="checkbox"><label><input type="checkbox" name="game" value="Minecraft">Minecraft</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="game" value="Call of Duty">Call of Duty</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="game" value="Grand Theft Auto V">Grand Theft Auto V</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="game" value="Super Mario Odyssey">Super Mario Odyssey</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="game" value="FIFA (series)">FIFA (series)</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="game" value="God of War">God of War</label></li>
+        </ul>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <div class="sub-group">
+        <label class="left" id="left-radio">Will you recommend the game to your friends?</label>
+        <ul style="list-style: none" class="right">
+          <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">Yes</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">Maybe</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">No</label></li>
+        </ul>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <h2>Any comments or suggestions?</h2>
+      <div class="commentbox">
+        <textarea rows="4" placeholder="Enter your comment here..."></textarea>
+        <br></br>
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
